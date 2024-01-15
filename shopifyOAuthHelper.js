@@ -33,9 +33,6 @@ const redirect= async (code, shop) =>{
     return data;
 }
 
-
-console.log(accessTokens[shop]);
-
 module.exports = {
     authorize,
     redirect,
