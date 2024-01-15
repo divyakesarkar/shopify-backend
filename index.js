@@ -5,9 +5,10 @@ const { PrismaClient } = require('@prisma/client');
 const Shopify = require('shopify-api-node');
 const { authorize, redirect, accessTokens } = require('./shopifyOAuthHelper');
 
-app.use(cors());
+
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 4000;
 
 
