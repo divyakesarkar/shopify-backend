@@ -1,11 +1,16 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
 const Shopify = require('shopify-api-node');
 const { authorize, redirect, accessTokens } = require('./shopifyOAuthHelper');
 
+app.use(cors());
+
 const app = express();
 const port = process.env.PORT || 4000;
+
+
 
 if (!port) {
   console.error('ERROR: Port is not set in .env file');
