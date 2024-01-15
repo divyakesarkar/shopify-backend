@@ -11,7 +11,7 @@ console.log(client_id);
 console.log(scope);
 
 const authorize= async (shop) =>{
-    return encodeURI(`https://${shop}.myshopify.com/admin/oauth/authorize?client_id&scope&redirect_uri=${process.env.redirect_uri}`);
+    return encodeURI(`https://${shop}.myshopify.com/admin/oauth/authorize?client_id=${process.env.client_id}&scope=${process.env.scopes}&redirect_uri=${process.env.redirect_uri}`);
 }
 
 const redirect= async (code, shop) =>{
